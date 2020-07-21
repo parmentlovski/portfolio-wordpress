@@ -1,0 +1,102 @@
+/*
+Theme Name: Le bisontin du web
+Author: Parmentelot Bryan
+Description: is a theme from scratch for a website specific
+Version: 1.0
+*/
+
+/* MEDIA QUERIES  */
+// Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) and (max-width: 767px){ ... }
+
+// Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) and (max-width: 991px){ ... }
+
+// Large devices (desktops, 992px and up)
+// @media (min-width: 992px) and (max-width: 1199px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { ... }
+
+// (min-width: 1500px) and (max-width: 1999px) { // imac 15
+
+// (min-width: 1100px) and (max-width: 1399px) { tout les mac // en dessous toute les tablettes 
+
+
+/* FONTS */
+
+@font-face {
+    font-family: 'Petrona-Regular';
+    src: url(assets/fonts/Petrona-Regular.ttf);
+}
+
+
+/* VARIABLES */
+
+$merriweather: 'Merriweather', serif;
+$petrona: 'Petrona-Regular';
+
+
+$white: #fff;
+$black: #000;
+$greyText: #9D9BA8;
+
+$padding: 50px 0 20px 0;
+$paddingBox: 50px 0;
+$margin: 80px 0 110px;
+
+$sizeH1: 45px;
+$sizeH2: 40px;
+$sizeH3: 22px;
+$sizeH4: 14px;
+$sizeMenu: 28px;
+$sizeTitle: 12px;
+$sizeP: 18px;
+$sizeButton: 30px;
+
+
+/* GÉNÉRALES */
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: $sizeH2;
+}
+
+h3 {
+    font-family: $roboto;
+}
+
+ul {
+    padding: 0;
+
+    li {
+        list-style: none;
+
+        a {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+/* SPECIFIQUE */
+
+/* HEADER */
+
+header {
+  padding: $padding;
+}
+
+
+/* FOOTER */
+footer {
+    color: $greyText;
+}
+

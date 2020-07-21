@@ -1,0 +1,55 @@
+/*
+Theme Name: Package
+Author: Parmentelot Bryan
+Description: is a theme from scratch for a website specific
+Version: 1.0
+*/
+
+@charset "UTF-8";
+/* MEDIA QUERIES  */
+/* FONTS */
+@font-face {
+  font-family: 'Archive-Regular';
+  src: url(assets/fonts/Archive-Regular.ttf);
+}
+
+/* VARIABLES */
+/* GÉNÉRALES */
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-family: "Roboto";
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a:hover {
+  text-decoration: none;
+}
+
+/* SPECIFIQUE */
+/* HEADER */
+header {
+  padding: 50px 0 20px 0;
+}
+
+/* FOOTER */
+footer {
+  color: #9D9BA8;
+}
+/*# sourceMappingURL=style.css.map */
