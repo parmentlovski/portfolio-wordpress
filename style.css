@@ -1,16 +1,15 @@
+@charset "UTF-8";
 /*
-Theme Name: Package
+Theme Name: Le bisontin du web
 Author: Parmentelot Bryan
 Description: is a theme from scratch for a website specific
 Version: 1.0
 */
-
-@charset "UTF-8";
 /* MEDIA QUERIES  */
 /* FONTS */
 @font-face {
-  font-family: 'Archive-Regular';
-  src: url(assets/fonts/Archive-Regular.ttf);
+  font-family: 'Petrona-Regular';
+  src: url(assets/fonts/Petrona-Regular.ttf);
 }
 
 /* VARIABLES */
@@ -26,30 +25,133 @@ h2 {
   font-size: 40px;
 }
 
-h3 {
-  font-family: "Roboto";
-}
-
-ul {
-  padding: 0;
-}
-
-ul li {
-  list-style: none;
-}
-
-ul li a:hover {
-  text-decoration: none;
+.navbar {
+  background: transparent !important;
 }
 
 /* SPECIFIQUE */
 /* HEADER */
 header {
   padding: 50px 0 20px 0;
+  height: 100vh;
+  font-family: "Merriweather", serif;
+  color: #464856;
+  /* NAV */
+}
+
+header nav .navbar-brand #logo {
+  color: #038396;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+header nav .navbar-brand #logo:hover {
+  color: #038396;
+}
+
+header nav .navbar-brand #logo span {
+  color: #464856;
+  font-size: 13px;
+  font-weight: normal;
+  letter-spacing: normal;
+  cursor: default;
+}
+
+header nav .navbar-end {
+  font-family: "Merriweather", serif;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+header nav .navbar-end a {
+  color: #464856;
+}
+
+header nav .navbar-end a:hover {
+  text-decoration: none;
+  background-color: transparent;
+  color: #464856;
+}
+
+header nav .link::before {
+  content: attr(data-content);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  clip-path: polygon(0 100%, 100% 100%, 100% 50%, 0 50%);
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 50%, 0 50%);
+}
+
+header nav .link span {
+  /* Texte des liens  */
+  clip-path: polygon(0 -20%, 100% -20%, 100% 52%, 0 52%);
+  -webkit-clip-path: polygon(0 -20%, 100% -20%, 100% 52%, 0 52%);
+}
+
+header nav .link:hover::before {
+  /* Effet déchiré */
+  -webkit-transform: translate(0, 3px);
+          transform: translate(0, 3px);
+}
+
+header #bottom-header #content-action {
+  text-align: center;
+}
+
+header #bottom-header #content-action h1 {
+  font-family: "Petrona-Regular";
+  font-size: 55px;
+  line-height: 90px;
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  header #bottom-header #content-action h1 {
+    font-size: 25px;
+    text-align: center;
+  }
+}
+
+header #bottom-header #content-action button {
+  border: none;
+  border-radius: 999px;
+  padding: 16px 20px;
+  text-transform: uppercase;
+  background-color: #038396;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+header #bottom-header #content-action button:hover {
+  background-color: #026876;
+}
+
+header #bottom-header #content-action button a {
+  color: #fff;
+}
+
+header #bottom-header #content-action button a:hover {
+  color: #fff;
+}
+
+header #bottom-header .img-header {
+  height: 424px;
+  width: 541px;
+}
+
+@media (max-width: 767px) {
+  header #bottom-header .img-header {
+    display: none;
+  }
 }
 
 /* FOOTER */
 footer {
-  color: #9D9BA8;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

@@ -33,13 +33,16 @@ Version: 1.0
 
 /* VARIABLES */
 
-$merriweather: 'Merriweather', serif;
+$merriweather: 'Merriweather',
+serif;
 $petrona: 'Petrona-Regular';
 
 
 $white: #fff;
 $black: #000;
-$greyText: #9D9BA8;
+$greyText: #464856;
+$blue: #038396;
+$blueDark: #026876;
 
 $padding: 50px 0 20px 0;
 $paddingBox: 50px 0;
@@ -67,22 +70,8 @@ h2 {
     font-size: $sizeH2;
 }
 
-h3 {
-    font-family: $roboto;
-}
-
-ul {
-    padding: 0;
-
-    li {
-        list-style: none;
-
-        a {
-            &:hover {
-                text-decoration: none;
-            }
-        }
-    }
+.navbar {
+    background: transparent !important;
 }
 
 
@@ -91,12 +80,142 @@ ul {
 /* HEADER */
 
 header {
-  padding: $padding;
+    padding: $padding;
+    height: 100vh;
+    font-family: $merriweather;
+    color: $greyText;
+
+    /* NAV */
+    nav {
+        .navbar-brand {
+
+            #logo {
+                color: $blue;
+                font-size: 20px;
+                font-weight: bold;
+                letter-spacing: 3px;
+
+                &:hover {
+                    color: $blue;
+                }
+
+                span {
+                    color: $greyText;
+                    font-size: 13px;
+                    font-weight: normal;
+                    letter-spacing: normal;
+                    cursor: default;
+                }
+
+            }
+        }
+
+        .navbar-end {
+            //     padding: 0;
+            //     justify-content: space-evenly;
+            font-family: $merriweather;
+            font-size: 22px;
+            font-weight: bold;
+
+            a {
+                color: $greyText;
+
+                &:hover {
+                    text-decoration: none;
+                    background-color: transparent;
+                    color: $greyText;
+                }
+            }
+        }
+
+        .link::before {
+            content: attr(data-content);
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            clip-path: polygon(0 100%, 100% 100%, 100% 50%, 0 50%);
+            -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 50%, 0 50%);
+        }
+
+        .link span {
+            /* Texte des liens  */
+            clip-path: polygon(0 -20%, 100% -20%, 100% 52%, 0 52%);
+            -webkit-clip-path: polygon(0 -20%, 100% -20%, 100% 52%, 0 52%);
+        }
+
+        .link:hover::before {
+            /* Effet déchiré */
+            transform: translate(0, 3px);
+        }
+    }
+
+    #bottom-header {
+
+        #content-action {
+            text-align: center;
+
+            h1 {
+                font-family: $petrona;
+                font-size: 55px;
+                line-height: 90px;
+                text-align: left;
+
+                @media(max-width: 767px){
+                    font-size: 25px;
+                    text-align: center;
+                }
+            }
+
+            button {
+                border: none;
+                border-radius: 999px;
+                padding: 16px 20px;
+                text-transform: uppercase;
+                background-color: $blue;
+                font-size: 18px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $blueDark;
+                }
+
+                a {
+                    color: $white;
+
+                    &:hover {
+                        color: $white;
+                    }
+                }
+            }
+
+            // @media(max-width: 767px){
+            //     order: 2;
+            //     text-align: center;
+            // }
+        }
+
+        .img-header {
+            height: 424px;
+            width: 541px;
+
+            @media(max-width: 767px){
+                display: none;
+                // order: 1;
+                // height: 125px;
+                // width: 175px;
+            }
+        }
+
+        // @media(max-width: 767px){
+        //     display: flex;
+        //     flex-direction: column;
+        // }
+    }
 }
+
 
 
 /* FOOTER */
 footer {
-    color: $greyText;
+    color: $white;
 }
-
