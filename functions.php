@@ -1,10 +1,11 @@
 <?php
+
 ##################################### LOAD SCRIPT ##################################
 add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
 function theme_enqueue_scripts()
 {
-	wp_enqueue_style('bulma-style', 'https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css', array(), true);
 	wp_register_style('main-style', get_template_directory_uri() . '/style.css', array(), true);
+	// wp_enqueue_style('bulma-style', 'https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css', array(), true);
 
 	wp_enqueue_style('font_styles_merriweather', 'https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
 
