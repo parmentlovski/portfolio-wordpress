@@ -46,7 +46,7 @@
             <div class="navbar-brand">
                 <a id="logo" class="navbar-item" href="/">
                     BP
-                    <span class="pl-5">Soutient vos projets web</span>
+                    <span class="pl-5 is-primary">Soutient vos projets web</span>
                 </a>
 
                 <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -58,7 +58,7 @@
 
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-end">
-                    <a href="#" class="link navbar-item" data-content="Services"><span>Services</span></a>
+                    <a href="#services" class="link navbar-item" data-content="Services"><span>Services</span></a>
                     <a href="#" class="link navbar-item" data-content="Projets"><span>Projets</span></a>
                     <a href="#" class="link navbar-item" data-content="Contact"><span>Contact</span></a>
                 </div>
@@ -68,21 +68,23 @@
 
         <div id="bottom-header" class="columns mt-6">
             <div id="content-action" class="column is-half mt-6 pt-6">
-                <h1>Freelance développeur web
+                <h1 class="primary">Freelance développeur web
                     <br>
                     à Besançon et ses alentours.
                     <br>
-                    Je crée votre projet web.</h1>
+                    Je crée votre site internet.</h1>
 
                 <button class="mt-6">
                     <a href="#">Devis gratuit</a>
                 </button>
+
             </div>
 
             <div class="column mt-6">
                 <img src="wp-content/themes/from_scratch/assets/img/header.png" class="img-header ml-6">
             </div>
         </div>
+
     </header>
     <svg xmlns="http://www.w3.org/2000/svg" width="735.781" height="793.607" viewBox="0 0 735.781 793.607" style="position: absolute; top:0; right:0; z-index: -1;">
         <path id="blob_menu" data-name="blob menu" d="M1005.2,0h639.737V734.949S1170.2,855.68,1028.154,750.728C963.24,702.765,903.289,606.049,909.61,418.235,917.125,194.935,1005.2,0,1005.2,0Z" transform="translate(-909.151)" fill="#f3fafb" />
