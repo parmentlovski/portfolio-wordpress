@@ -23,13 +23,17 @@ Version: 1.0
 // (min-width: 1100px) and (max-width: 1399px) { tout les mac // en dessous toute les tablettes 
 
 
-/* FONTS */
+@charset "utf-8";
 
-@font-face {
-    font-family: 'Petrona-Regular';
-    src: url(assets/fonts/Petrona-Regular.ttf);
-}
+// Import a Google Font
+// @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 
+// Set your brand colors
+$purple: #8A4D76;
+$pink: #FA7C91;
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
 
 /* VARIABLES */
 
@@ -37,25 +41,43 @@ $merriweather: 'Merriweather',
 serif;
 $petrona: 'Petrona-Regular';
 
-
 $white: #fff;
 $black: #000;
 $greyText: #464856;
 $blue: #038396;
 $blueDark: #026876;
 
-$padding: 50px 0 20px 0;
-$paddingBox: 50px 0;
-$margin: 80px 0 110px;
+// Update Bulma's global variables
+$primary: $blueDark; 
 
-$sizeH1: 45px;
-$sizeH2: 40px;
-$sizeH3: 22px;
-$sizeH4: 14px;
-$sizeMenu: 28px;
-$sizeTitle: 12px;
-$sizeP: 18px;
-$sizeButton: 30px;
+
+// Update some of Bulma's component variables
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// Import only what you need from Bulma
+@import "node_modules/bulma/sass/utilities/_all.sass";
+@import "node_modules/bulma/sass/grid/_all.sass";
+@import "node_modules/bulma/sass/helpers/_all.sass";
+@import "node_modules/bulma/sass/base/_all.sass";
+@import "node_modules/bulma/sass/elements/button.sass";
+@import "node_modules/bulma/sass/elements/container.sass";
+@import "node_modules/bulma/sass/elements/title.sass";
+@import "node_modules/bulma/sass/form/_all.sass";
+@import "node_modules/bulma/sass/components/navbar.sass";
+@import "node_modules/bulma/sass/layout/hero.sass";
+@import "node_modules/bulma/sass/layout/section.sass";
+
+/* FONTS */
+
+// @font-face {
+//     font-family: 'Petrona-Regular';
+//     src: url(assets/fonts/Petrona-Regular.ttf);
+// }
+
+
+
 
 
 /* GÉNÉRALES */
@@ -67,7 +89,8 @@ body {
 }
 
 h2 {
-    font-size: $sizeH2;
+    font-size: $merriweather;
+    font-weight: bold;
 }
 
 .navbar {
@@ -80,10 +103,9 @@ h2 {
 /* HEADER */
 
 header {
-    padding: $padding;
+    // padding: $padding;
     height: 100vh;
     font-family: $merriweather;
-    color: $greyText;
 
     /* NAV */
     nav {
@@ -160,7 +182,7 @@ header {
                 line-height: 90px;
                 text-align: left;
 
-                @media(max-width: 767px){
+                @media(max-width: 767px) {
                     font-size: 25px;
                     text-align: center;
                 }
@@ -198,7 +220,7 @@ header {
             height: 424px;
             width: 541px;
 
-            @media(max-width: 767px){
+            @media(max-width: 767px) {
                 display: none;
                 // order: 1;
                 // height: 125px;
@@ -211,6 +233,16 @@ header {
         //     flex-direction: column;
         // }
     }
+}
+
+#services {
+
+    .img-services {
+        height: 435px;
+        width: 632px;
+    }
+
+    // .box-services {}
 }
 
 
