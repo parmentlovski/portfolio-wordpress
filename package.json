@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "style.scss",
-  "dependencies": {},
+  "dependencies": {
+    "bulma-helpers": "^0.3.12"
+  },
   "devDependencies": {
     "bulma": "^0.9.0",
     "node-sass": "^4.14.1"
