@@ -10,6 +10,7 @@
     <title>Développeur web Freelance à Besançon - Création de site internet – Parmentelot Bryan</title>
 
     <!-- Add css specifiq at this theme -->
+
     <link href="<?php bloginfo('template_directory'); ?>/style.css" rel="stylesheet">
     <?php wp_head(); ?>
 
@@ -17,37 +18,14 @@
 
 <body>
 
-
     <header class="container">
-        <!-- <div id="top-header" class="columns is-vcentered">
-            <div id="content-logo" class="column is-half is-flex">
-                <a href="/" id="logo">
-                    BP -->
-        <!-- <img src="../wp-content/themes/fromscratch/assets/img/" alt="Logo" width="" alt=""> -->
-        <!-- </a>
-                <p class="pl-5">Soutient vos projets web</p>
-            </div> -->
-        <!-- <nav class="column navbar" role="navigation" aria-label="main navigation">
-                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-                <ul class="is-flex navbar-item has-dropdown is-hoverable">
-                    <div class="navbar-dropdown">
-                        <li class="ml-5 navbar-item"><a href="#" class="link" data-content="Services"><span>Services</span></a></li>
-                        <li class="mx-6 navbar-item"><a href="#" class="link" data-content="Projets"><span>Projets</span></a></li>
-                        <li class="navbar-item"><a href="#" class="link" data-content="Contact"><span>Contact</span></a></li>
-                    </div>
-                </ul>
-            </nav> -->
 
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a id="logo" class="navbar-item" href="/">
                     BP
-                    <span class="pl-5 is-primary">Soutient vos projets web</span>
                 </a>
+                <span id="slogan">Soutient vos projets web</span>
 
                 <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>
@@ -66,8 +44,8 @@
         </nav>
         </div>
 
-        <div id="bottom-header" class="columns mt-6">
-            <div id="content-action" class="column is-half mt-6 pt-6">
+        <div id="bottom-header" class="columns">
+            <div id="content-action" class="column is-7 mt-6 pt-6 ">
                 <h1 class="primary">Freelance développeur web
                     <br>
                     à Besançon et ses alentours.
@@ -81,7 +59,7 @@
             </div>
 
             <div class="column mt-6">
-                <img src="wp-content/themes/from_scratch/assets/img/header.png" class="img-header ml-6">
+                <img src="wp-content/themes/from_scratch/assets/img/header.png" class="img-header">
             </div>
         </div>
 

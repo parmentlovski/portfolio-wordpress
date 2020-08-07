@@ -6,21 +6,13 @@ Version: 1.0
 */
 
 /* MEDIA QUERIES  */
-// Small devices (landscape phones, 576px and up)
-// @media (min-width: 576px) and (max-width: 767px){ ... }
 
-// Medium devices (tablets, 768px and up)
-// @media (min-width: 768px) and (max-width: 991px){ ... }
+// mobile: up to 768px
+// tablet: from 769px
+// desktop: from 1024px
+// widescreen: from 1216px
+// fullhd: from 1408px
 
-// Large devices (desktops, 992px and up)
-// @media (min-width: 992px) and (max-width: 1199px) { ... }
-
-// Extra large devices (large desktops, 1200px and up)
-// @media (min-width: 1200px) { ... }
-
-// (min-width: 1500px) and (max-width: 1999px) { // imac 15
-
-// (min-width: 1100px) and (max-width: 1399px) { tout les mac // en dessous toute les tablettes 
 
 
 @charset "utf-8";
@@ -46,9 +38,10 @@ $black: #000;
 $greyText: #464856;
 $blue: #038396;
 $blueDark: #026876;
+$padding: 50px 0 20px 0;
 
 // Update Bulma's global variables
-$primary: $blueDark; 
+$primary: $blueDark;
 
 
 // Update some of Bulma's component variables
@@ -69,14 +62,7 @@ $input-shadow: none;
 @import "node_modules/bulma/sass/layout/hero.sass";
 @import "node_modules/bulma/sass/layout/section.sass";
 
-/* FONTS */
-
-// @font-face {
-//     font-family: 'Petrona-Regular';
-//     src: url(assets/fonts/Petrona-Regular.ttf);
-// }
-
-
+// @import "node_modules/bulma-helpers/bulma-helpers.sass";
 
 
 
@@ -103,7 +89,7 @@ h2 {
 /* HEADER */
 
 header {
-    // padding: $padding;
+    padding: 50px 0 20px 0;
     height: 100vh;
     font-family: $merriweather;
 
@@ -120,21 +106,41 @@ header {
                 &:hover {
                     color: $blue;
                 }
+            }
 
-                span {
-                    color: $greyText;
-                    font-size: 13px;
-                    font-weight: normal;
-                    letter-spacing: normal;
-                    cursor: default;
+            #slogan {
+                display: flex;
+                align-items: center;
+                padding-top: 2px;
+                color: $greyText;
+                font-size: 13px;
+                font-weight: lighter;
+                letter-spacing: normal;
+
+                @media(max-width: 767px) {
+                    margin-left: 10%;
                 }
 
+                @media(min-width: 768px) and (max-width: 1699px) {
+                    padding-top: 3px;
+                }
+
+                @media(min-width: 1700px) {
+                    margin-left: 4%;
+                }
+            }
+
+            // @media(min-width: 768px) and (max-width: 1699px){
+            //     width: 20%;
+            // }
+
+            @media(min-width: 1700px) {
+                width: 80%;
             }
         }
 
         .navbar-end {
             //     padding: 0;
-            //     justify-content: space-evenly;
             font-family: $merriweather;
             font-size: 22px;
             font-weight: bold;
@@ -147,6 +153,29 @@ header {
                     background-color: transparent;
                     color: $greyText;
                 }
+
+                @media(min-width: 1200px) and (max-width: 1699px) {
+                    &:nth-child(2) {
+                        margin-left: 30%;
+                        margin-right: 30%;
+                    }
+                }
+
+                @media(min-width: 1700px) {
+                    &:nth-child(2) {
+                        margin-left: 20%;
+                        margin-right: 20%;
+                    }
+                }
+            }
+
+            @media(min-width: 1200px) and (max-width: 1699px) {
+                justify-content: flex-end;
+                margin-left: 71.5%;
+            }
+
+            @media(min-width: 1700px) {
+                justify-content: space-evenly;
             }
         }
 
@@ -186,6 +215,18 @@ header {
                     font-size: 25px;
                     text-align: center;
                 }
+
+                @media(min-width: 768px) and (max-width: 1699px) {
+                    margin-left: 5%;
+                    font-size: 45px;
+                    line-height: 105px;
+                }
+
+                @media(min-width: 1700px) {
+                    display: flex;
+                    justify-content: center;
+                    line-height: 120px;
+                }
             }
 
             button {
@@ -208,12 +249,24 @@ header {
                         color: $white;
                     }
                 }
+
+                @media(min-width: 768px) and (max-width: 1699px) {
+                    margin-top: 35px;
+                    margin-right: 30%;
+                }
+
+                @media(min-width: 1700px) {
+                    margin-top: 100px;
+                }
             }
 
-            // @media(max-width: 767px){
-            //     order: 2;
-            //     text-align: center;
-            // }
+            @media(min-width: 768px) and (max-width: 1699px) {
+                margin-top: 90px;
+            }
+
+            @media(min-width: 1700px) {
+                margin-top: 120px;
+            }
         }
 
         .img-header {
@@ -222,16 +275,26 @@ header {
 
             @media(max-width: 767px) {
                 display: none;
-                // order: 1;
-                // height: 125px;
-                // width: 175px;
             }
+
+            @media(min-width: 768px) and (max-width: 1699px) {
+                margin-top: 80px;
+            }
+
+            @media(min-width: 1700px) {
+                margin-top: 150px;
+                margin-left: 25%;
+            }
+
         }
 
-        // @media(max-width: 767px){
-        //     display: flex;
-        //     flex-direction: column;
+        // @media(min-width: 1700px){
+        //     margin-top: 150px;
         // }
+    }
+
+    @media(min-width: 1700px) {
+        padding: 80px 0 40px 0;
     }
 }
 
