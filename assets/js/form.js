@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
         else if (document.querySelector('#name').value === ("")) {
             mauvaiseSaisieNom.style.color = "grey";
-            mauvaiseSaisieNom.innerHTML = "Veuillez indiquer votre nom";
+            mauvaiseSaisieNom.innerHTML = "Veuillez indiquer votre nom et prénom";
             return false;
         }
     
