@@ -1,3 +1,3 @@
 document.addEventListener("DOMContentLoaded", function() {
-    ScrollReveal().reveal('.target', { delay: 125 });
+    ScrollReveal().reveal('.target', { delay: 200 });
  });
