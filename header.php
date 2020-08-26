@@ -14,8 +14,6 @@
     <link href="<?php bloginfo('template_directory'); ?>/style.css" rel="stylesheet">
     <?php wp_head(); ?>
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script> -->
-
 </head>
 
 <body>
@@ -39,7 +37,6 @@
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-end">
                     <a href="#services" class="link navbar-item" data-content="Services"><span>Services</span></a>
-                    <a href="#solution" class="link navbar-item" data-content="Solutions"><span>Solutions</span></a>
                     <a href="#projets" class="link navbar-item" data-content="Projets"><span>Projets</span></a>
                     <a href="#contact" class="link navbar-item" data-content="Contact"><span>Contact</span></a>
                 </div>
@@ -49,56 +46,20 @@
 
         <div id="bottom-header" class="columns">
             <div id="content-action" class="column is-7 mt-6 pt-6 ">
-                <h1 class="primary">
-                <div class="freelance">   
-                Freelance développeur web
+                <h1 class="primary">Freelance développeur web
                     <br>
                     à Besançon et ses alentours.
-                    <br> 
-                    </div> 
-                    <!-- Je crée votre site internet. -->
-                    <div class="animationLetters">
-                    <span>J</span>
-                    <span class="spaceWords">e</span>
-                    &nbsp;
-                    <span>c</span>
-                    <span>r</span>
-                    <span>é</span>
-                    <span class="spaceWords">e</span>
-                    &nbsp;
-                    <span>v</span>
-                    <span>o</span>
-                    <span>t</span>
-                    <span>r</span>
-                    <span class="spaceWords">e</span>
-                    &nbsp;
-                    <span>s</span>
-                    <span>i</span>
-                    <span>t</span>
-                    <span class="spaceWords">e</span>
-                    &nbsp;
-                    <span>i</span>
-                    <span>n</span>
-                    <span>t</span>
-                    <span>e</span>
-                    <span>r</span>
-                    <span>n</span>
-                    <span>e</span>
-                    <span>t</span>
-                    <span>.</span>
-                    <!-- <div class="ligne"></div> -->
-                </div>
-                </h1>
-                
+                    <br>
+                    Je crée votre site internet.</h1>
 
-                <button id="btn-contact" class="mt-6">
+                <button class="mt-6">
                     <a href="#contact">ME CONTACTER</a>
                 </button>
 
             </div>
 
-            <div class="column content-header">
-                <img src="wp-content/themes/from_scratch/assets/img/header.svg" class="img-header">
+            <div class="column content-header target">
+                <img src="../wp-content/themes/from_scratch/assets/img/header.svg" class="img-header">
             </div>
         </div>
     
