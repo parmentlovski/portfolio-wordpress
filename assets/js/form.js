@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Premier champ = NOM 
     var verifNom = document.querySelector('#name');
     var verifMail = document.querySelector('#email');
-    var verifObject = document.querySelector('#object');
     var verifMessage = document.querySelector('#message');
     
     verifNom.addEventListener('blur', erreurNom);
@@ -63,31 +62,31 @@ document.addEventListener("DOMContentLoaded", function() {
         }   
     }
     
-    // Troisième champ : message 
+    // // Troisième champ : message 
     
     
-    verifObject.addEventListener('blur', erreurObject);
+    // verifObject.addEventListener('blur', erreurObject);
     
-    function erreurObject() {
-        mauvaiseSaisieObject = document.querySelector('#erreurObject');
-        object = /^[^<>,<|>]+$/;
+    // function erreurObject() {
+    //     mauvaiseSaisieObject = document.querySelector('#erreurObject');
+    //     object = /^[^<>,<|>]+$/;
     
-        if (document.querySelector('#object').value.match(object)) {
-            mauvaiseSaisieObject.innerHTML = "";
-            return true;
-        }
+    //     if (document.querySelector('#object').value.match(object)) {
+    //         mauvaiseSaisieObject.innerHTML = "";
+    //         return true;
+    //     }
     
-        else if (document.querySelector('#object').value === ("")) {
-            mauvaiseSaisieObject.style.color = "grey";
-            mauvaiseSaisieObject.innerHTML = "Veuillez indiquer un objet";
-            return false;
-        }
+    //     else if (document.querySelector('#object').value === ("")) {
+    //         mauvaiseSaisieObject.style.color = "grey";
+    //         mauvaiseSaisieObject.innerHTML = "Veuillez indiquer un objet";
+    //         return false;
+    //     }
     
-        else {
-            mauvaiseSaisieObject.innerHTML = "Veuillez indiquer un objet valide";
-            return false;
-        }
-    }
+    //     else {
+    //         mauvaiseSaisieObject.innerHTML = "Veuillez indiquer un objet valide";
+    //         return false;
+    //     }
+    // }
     
     
     // Quatrième champ : message 
@@ -122,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     function validation(){
      
-        if ( erreurNom() === true && erreurMail() === true && erreurObject() === true  && erreurMessage() === true) {
+        if ( erreurNom() === true && erreurMail() === true  && erreurMessage() === true) { //&& erreurObject() === true
             submitForm();
             event.preventDefault();
         } 
