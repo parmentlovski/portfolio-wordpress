@@ -37,7 +37,7 @@
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-end">
                     <a href="#services" class="link navbar-item" data-content="Services"><span>Services</span></a>
-                    <a href="#projets" class="link navbar-item" data-content="Projets"><span>Projets</span></a>
+                    <a href="#projets" class="link navbar-item mx-5" data-content="Projets"><span>Projets</span></a>
                     <a href="#contact" class="link navbar-item" data-content="Contact"><span>Contact</span></a>
                 </div>
             </div>
