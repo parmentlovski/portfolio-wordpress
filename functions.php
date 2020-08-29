@@ -7,6 +7,9 @@ function theme_enqueue_scripts()
 	// wp_enqueue_style('bulma-style', 'https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css', array(), true);
 
 	wp_enqueue_style('font_styles_merriweather', 'https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+	wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.14.0/css/all.css');
+	wp_enqueue_style('leaflet_styles', 'https://unpkg.com/leaflet@1.6.0/dist/leaflet.css');
+	// wp_enqueue_style('leaflet_styles', 'https://unpkg.com/leaflet@1.3.1/dist/leaflet.css');
 
 	wp_enqueue_script('librairie-scrollreveal', 'https://unpkg.com/scrollreveal');
 	wp_enqueue_script('librairie-gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js');
@@ -14,6 +17,7 @@ function theme_enqueue_scripts()
 	wp_enqueue_script('script-scroll', '/wp-content/themes/from_scratch/assets/js/scroll.js');
 	wp_enqueue_script('script-js', '/wp-content/themes/from_scratch/assets/js/script.js');
 	wp_enqueue_script('script-form', '/wp-content/themes/from_scratch/assets/js/form.js');
+	wp_enqueue_script('script-map', '/wp-content/themes/from_scratch/assets/js/map.js');
 	wp_enqueue_script('script-projet', '/wp-content/themes/from_scratch/assets/js/projet.js');
 	wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js', array(), 1.0, true);
 
@@ -22,6 +26,8 @@ function theme_enqueue_scripts()
 
 	wp_enqueue_script('script-debug-scrollMagic', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js');
 	wp_enqueue_script('script-plugin-scrollMagic', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js');
+    // wp_enqueue_script('leaflet', 'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js');
+	wp_enqueue_script('leaflet', 'https://unpkg.com/leaflet@1.6.0/dist/leaflet.js');
 	
 	// wp_enqueue_script('script-jquery', 'https://code.jquery.com/jquery-3.3.1.min.js', array(), 1.0, true);
 	// wp_enqueue_script('script_navbar', 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js', array(), 1.0, true);
@@ -149,11 +155,11 @@ if (function_exists('add_theme_support')) {
 			sanitize_text_field($_POST['competencesQuatres'])
 		);
 	}
-	if (isset($_POST['competencesCinq'])) {
+	if (isset($_POST['competencesCinqè!è'])) {
 		update_post_meta(
 			$post_ID,
-			'_competencesCinq',
-			sanitize_text_field($_POST['competencesCinq'])
+			'_competencesCinqè!è',
+			sanitize_text_field($_POST['competencesCinqè!è'])
 		);
 	}
   }
@@ -192,8 +198,35 @@ function fromscratch_contact_form()
 		exit();
 	}
 }
-
 add_action('init', 'fromscratch_contact_form');
+
+##################################### MAP #################################
+
+function adress_setup_menu()
+{
+    add_menu_page('Adresse Page', 'Adresse', 'manage_options', 'adress_option', 'adress_init');
+}
+function adress_init()
+{
+    echo '<h1>Salut tous le monde!</h1> <form id="form_reply" method="post">
+
+<input type="text" id="new-value" name="new-value">
+<button type="submit" id="submit-position">envoyer</button>
+<span id="resultat"></span>
+</form>';
+
+    if (!$_POST['new-value'] == '') {
+        global $wpdb;
+        $wpdb->update(
+            $wpdb->prefix . 'options',
+            array('option_value' => $_POST['new-value']),
+            array('option_name' => 'adress_client')
+        );
+	}
+	
+}
+add_action('admin_menu', 'adress_setup_menu');
+
 
 
 ##################################### SECURITÉ #################################
