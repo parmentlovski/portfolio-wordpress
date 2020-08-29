@@ -39,7 +39,7 @@
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-end">
                     <a href="#services" class="link navbar-item" data-content="Services"><span>Services</span></a>
-                    <a href="#solution" class="link navbar-item" data-content="Solutions"><span>Solutions</span></a>
+                    <!-- <a href="#solution" class="link navbar-item" data-content="Solutions"><span>Solutions</span></a> -->
                     <a href="#projets" class="link navbar-item" data-content="Projets"><span>Projets</span></a>
                     <a href="#contact" class="link navbar-item" data-content="Contact"><span>Contact</span></a>
                 </div>
@@ -58,18 +58,16 @@
                     </div> 
                     <!-- Je crée votre site internet. -->
                     <div class="animationLetters">
-                    <span>J</span>
-                    <span class="spaceWords">e</span>
-                    &nbsp;
-                    <span>c</span>
+                    <span>C</span>
                     <span>r</span>
                     <span>é</span>
-                    <span class="spaceWords">e</span>
-                    &nbsp;
-                    <span>v</span>
-                    <span>o</span>
+                    <span>a</span>
                     <span>t</span>
-                    <span>r</span>
+                    <span>i</span>
+                    <span>o</span>
+                    <span class="spaceWords">n</span>   
+                    &nbsp;
+                    <span>d</span>
                     <span class="spaceWords">e</span>
                     &nbsp;
                     <span>s</span>
@@ -105,7 +103,7 @@
     </header>
 
     <svg xmlns="http://www.w3.org/2000/svg" width="735.781" height="793.607" viewBox="0 0 735.781 793.607" style="position: absolute; top:0; right:0; z-index: -1;" class="svgHeader"> 
-            <path id="blob_menu" data-name="blob menu" d="M1005.2,0h639.737V734.949S1170.2,855.68,1028.154,750.728C963.24,702.765,903.289,606.049,909.61,418.235,917.125,194.935,1005.2,0,1005.2,0Z" transform="translate(-909.151)" fill="#FFE18F" />
+            <path id="blob_menu" data-name="blob menu" d="M1005.2,0h639.737V734.949S1170.2,855.68,1028.154,750.728C963.24,702.765,903.289,606.049,909.61,418.235,917.125,194.935,1005.2,0,1005.2,0Z" transform="translate(-909.151)" fill="#ff9f40" />
         </svg>
 
     <script>
