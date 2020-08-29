@@ -1,5 +1,6 @@
 <footer>
    <div class="content-footer py-4">
+
       <div>
          <img src="../wp-content/themes/from_scratch/assets/img/send.svg" alt="Logo du Github de Parmentelot Bryan">
          <p>parmentelot.bryan@hotmail.fr </p>
