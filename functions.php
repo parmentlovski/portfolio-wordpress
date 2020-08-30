@@ -14,6 +14,8 @@ function theme_enqueue_scripts()
 	wp_enqueue_script('librairie-scrollreveal', 'https://unpkg.com/scrollreveal');
 	wp_enqueue_script('librairie-gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js');
 	wp_enqueue_script('fontawesome', 'https://use.fontawesome.com/releases/v5.3.1/js/all.js');
+	wp_enqueue_script('leaflet', 'https://unpkg.com/leaflet@1.6.0/dist/leaflet.js');
+	
 	wp_enqueue_script('script-scroll', '/wp-content/themes/from_scratch/assets/js/scroll.js');
 	wp_enqueue_script('script-js', '/wp-content/themes/from_scratch/assets/js/script.js');
 	wp_enqueue_script('script-form', '/wp-content/themes/from_scratch/assets/js/form.js');
@@ -26,8 +28,6 @@ function theme_enqueue_scripts()
 
 	wp_enqueue_script('script-debug-scrollMagic', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js');
 	wp_enqueue_script('script-plugin-scrollMagic', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js');
-    // wp_enqueue_script('leaflet', 'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js');
-	wp_enqueue_script('leaflet', 'https://unpkg.com/leaflet@1.6.0/dist/leaflet.js');
 	
 	// wp_enqueue_script('script-jquery', 'https://code.jquery.com/jquery-3.3.1.min.js', array(), 1.0, true);
 	// wp_enqueue_script('script_navbar', 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js', array(), 1.0, true);
@@ -178,7 +178,7 @@ function fromscratch_contact_form()
 
 		$email = sanitize_email($_POST['email']);
 
-		$sujet = sanitize_text_field($_POST['object']);
+		$tel = sanitize_text_field($_POST['tel']);
 
 		$message = sanitize_text_field($_POST['message']);
 
@@ -186,13 +186,16 @@ function fromscratch_contact_form()
 
 		$headers = "From: \"" . $name . "\" <" . $email . ">\r\n";
 
+		$sujet = "Vous recevez un message: \"" . $tel;
+
 		$envoie = mail($admin_email, $sujet, $message, $headers);
 
 		$textSend = ($envoie === true) ? 'sent' : 'notSent';
 
 
 		$wp->add_query_var('send');
-		$url = get_page_by_title('accueil');
+		$url = get_page_by_title('front-page');
+		// $url = get_page_by_path( 'front-page/#contact' );
 		wp_redirect(get_permalink($url) . '?send=' . $textSend);
 
 		exit();
