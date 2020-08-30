@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function() {
 var controller = new ScrollMagic.Controller();
 var tlService = new TimelineMax();
 tlService
-  .from('.img-services', 0.2, {opacity:0, x:-150, ease: Power0.easeOut})  
-  .staggerFrom('.card-services', 0.3, {y:50, opacity: 0}, 0.3)
+  .staggerFrom('.animation-services', 0.3, {y:0, opacity: 0}, 0.3)
+  // .staggerFrom('.line-services-horizontal', 0.3, {y:0, opacity: 0}, 0.3)
    
 
 var scene = new ScrollMagic.Scene({
