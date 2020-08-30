@@ -1,19 +1,19 @@
 <?php do_action('display_header', 'package_header'); ?>
 
-<main class="container mt-6">
+<main class="mt-6">
 
-    <section id="services" class="mt-8">
+    <section id="services" class="container mt-8">
 
-        <h2 class="is-size-2 mt-6 mb-10 titleSection"><span class="backgroundYellow">SERVICES</span></h2>
+        <h2 class="is-size-2 is-size-3-mobile mt-6 mb-10 titleSection"><span class="backgroundYellow">SERVICES</span></h2>
 
         <div class="content-services">
 
-            <div class="box-services columns is-multiline">
-                <div class="card-services column is-8 mt-6">
+            <div class="box-services columns is-mobile is-multiline">
+                <div class="card-services animation-services column is-offset-1-mobile is-10-mobile is-offset-1-desktop is-11-desktop mt-6">
                     <h3 class="mt-5">
                         <img src="wp-content/themes/from_scratch/assets/img/design.png" class="mr-4" alt="Logo représentant le design web" width="64px" height="64px">
                         <span>Design</span></h3>
-                    <h4 class="my-5">“Mettons en valeur votre identité en répondant à vos objectifs“</h4>
+                    <h4 class="mt-6 mb-5">“Mettons en valeur votre identité en répondant à vos objectifs“</h4>
                     <p>
                         La magie de la programmation réalisera tout vos désirs. </p>
                     <p>Je dispose des compétences permettant de mettre en valeur l'identité de votre projet : allant du template acheté au design sur mesure.
@@ -21,12 +21,15 @@
                     <p>Selon votre budget nous déciderons ensemble de la solution la plus adéquate.</p>
                     </p>
                 </div>
-                <img class="img-services mt-6 column is-half services" src="wp-content/themes/from_scratch/assets/img/services.png" alt="Image représentant le service" width="1256px" height="1588px">
 
-                <div class="card-services column is-offset-2 mt-6">
+                <div class="animation-services line-services-horizontal">
+                </div>
+                <!-- <img class="img-services mt-6 column is-half services" src="wp-content/themes/from_scratch/assets/img/services.png" alt="Image représentant le service" width="1256px" height="1588px"> -->
+
+                <div class="card-services animation-services column is-offset-1-mobile is-10-mobile is-offset-1-desktop is-11-desktop">
                     <h3>
                         <img src="wp-content/themes/from_scratch/assets/img/repair.png" class="mr-4" alt="Logo représentant le développement web" width="64px" height="64px"> <span>Développement</span></h3>
-                    <h4 class="my-5">“La clef de voûte de votre site internet“</h4>
+                    <h4 class="mt-6 mb-5">“La clef de voûte de votre site internet“</h4>
                     <p>
                         Selon vos besoins et vos objectifs je propose différentes solutions :
                     </p>
@@ -37,11 +40,14 @@
                     </ul>
                 </div>
 
-                <div class="card-services column is-8 mt-6">
+                <div class="animation-services line-services-horizontal">
+                </div>
+
+                <div class="card-services animation-services column is-offset-1-mobile is-10-mobile is-offset-1-desktop is-11-desktop">
                     <h3>
                         <img src="wp-content/themes/from_scratch/assets/img/vision.png" class="mr-4" alt="Logo représentant la méthodologie" width="64px" height="64px">
                         <span>Procédé</span></h3>
-                    <h4 class="my-5">“Ensemble, nous répondrons à vos besoins“</h4>
+                    <h4 class="mt-6 mb-5">“Ensemble, nous répondrons à vos besoins“</h4>
 
                     <p>Dès notre premier échange nous discuterons ensemble de vos besoins et objectifs ce qui me permettra d'effectuer un devis détaillée.</p>
 
@@ -55,20 +61,20 @@
         </div>
     </section>
 
-    <section id="projets" class="mt-6">
-        <h2 class="is-size-2 mt-6 mb-10 titleSection"><span class="backgroundYellow">PROJETS</span></h2>
+    <section id="projets" class="container mt-6">
+        <h2 class="is-size-2 is-size-3-mobile mt-6 mb-10 titleSection"><span class="backgroundYellow">PROJETS</span></h2>
 
         <div class="content-projets">
 
-            <div class="box-projets columns is-multiline">
+            <div class="box-projets columns is-multiline is-mobile">
                 <div class="line horizontal-right"></div>
-                
+
                 <div class="line horizontal-left"></div>
                 <div class="line vertical-bottom"></div>
                 <div class="line vertical-top"></div>
 
                 <div class="content-heart">
-                <i class="far fa-heart"></i>
+                    <i class="far fa-heart"></i>
                 </div>
                 <?php
                 $post = array(
@@ -87,22 +93,22 @@
                         $competences = get_post_custom();
 
                 ?>
-                        <div class="projet item column is-5">
+                        <div class="projet item column is-offset-1-mobile is-10-mobile is-5-tablet">
 
 
                             <h3 class="has-text-centered is-size-3 mb-4"><?php the_title(); ?></h3>
 
-                            <div id="content-placement" class="columns my-5">
+                            <div id="content-placement" class="columns is-mobile my-5">
 
                                 <!-- <div class="column is-1 arrow">
                                         <img src="wp-content/themes/from_scratch/assets/img/left.png" class="left" alt="Logo représentant une flèche allant dans la direction de gauche" height="32px" width="32px">
                                     </div> -->
 
 
-                                <div class="has-text-centered column is-offset-1 is-4 content-img-projet" style="background-image: url('<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>');">
+                                <div class="has-text-centered column is-offset-1-mobile is-10-mobile is-offset-1-tablet is-4-tablet content-img-projet" style="background-image: url('<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>');">
                                     <!-- <img src="wp-content/themes/from_scratch/assets/img/bysshe.png" alt="Image du projet Bysshe" height="" width=""> -->
                                 </div>
-                                <div class="content-competences column is-half ">
+                                <div class="content-competences column is-offset-1-mobile is-10-mobile is-half-tablet ">
                                     <div class="columns is-multiline">
 
                                         <?php
@@ -157,11 +163,8 @@
 
     </section>
 
-
-</main>
-
 <section id="contact" class="mt-6">
-    <h2 class="is-size-2 mt-10 titleSection titleWhite"><span class="backgroundYellow titleContact mt-6">CONTACT</span></h2>
+    <h2 class="is-size-2 is-size-3-mobile mt-10 titleSection titleWhite"><span class="backgroundYellow titleContact mt-6">CONTACT</span></h2>
 
     <div class="content-form columns">
 
@@ -175,34 +178,41 @@
             <form action="#" id="contactForm" method="post">
                 <!-- <legend class="text-center">Me contacter</legend> -->
 
-                <div id="content-input" class="columns is-multiline">
+                <div id="content-input" class="columns is-multiline is-mobile">
 
-                    <div class="column is-offset-1 is-11">
-                        <div class="box-input columns">
+                    <div class="help-block with-errors column is-12-mobile is-offset-desktop is-11-desktop">
+                        <div class="box-input columns is-mobile input-erreur">
+                            <span class="input-logo column is-1"><i class="fas fa-exclamation-circle" aria-hidden="true"></i></span>
+                            <span id="erreur" class="erreur column is-11"></span>
+                        </div>
+                    </div>
+
+                    <div class="column is-12-mobile is-offset-1-desktop is-11-desktop ">
+                        <div class="box-input columns is-mobile">
                             <!-- <img src="wp-content/themes/from_scratch/assets/img/user.png" class="formLogo" alt="Logo pour le champ du formulaire prénom" width="16px" height="16px"> -->
                             <span class="input-logo column is-1"><i class="fa fa-user" aria-hidden="true"></i></span>
                             <input type="text" id="name" class="column is-10" name="name" placeholder="Nom / prénom">
                             <span class="input-obligatoire column is-1"><i class="fas fa-asterisk"></i></span>
-                            <br>
-                            <!-- <span id="erreurName" class="erreur"></span> -->
                         </div>
+                        <span id="erreurName" class="erreur"></span>
                     </div>
 
-                    <div class="column is-offset-1 is-11">
-                        <div class="box-input columns">
+                    <div class="column is-12-mobile is-offset-1-desktop is-11-desktop">
+                        <div class="box-input columns is-mobile">
                             <span class="input-logo column is-1"><i class="fas fa-at" aria-hidden="true"></i></span>
                             <input type="email" name="email" class="column is-10" id="email" placeholder="E-mail">
-                            <span class="input-obligatoire column is-1"><i class="fas fa-asterisk"></i></span>
-                            <br>
-                            <!-- <span id="erreurEmail" class="erreur"></span> -->
+                            <span class="input-obligatoire column is-1"><i class="fas fa-asterisk"></i></span><br>
                         </div>
+                        <span id="erreurEmail" class="erreur"></span>
+
                     </div>
 
-                    <div class="column is-offset-1 is-11">
-                        <div class="box-input columns">
+                    <div class="column is-12-mobile is-offset-1-desktop is-11-desktop">
+                        <div class="box-input columns is-mobile">
                             <span class="column is-1 input-logo-tel"><i class="fas fa-phone" aria-hidden="true" style="transform: rotate(100deg);"></i></span>
                             <input type="tel" id="tel" class="column is-11" name="tel" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" placeholder="Téléphone">
                         </div>
+                        <span id="erreurTel" class="erreur"></span>
                     </div>
 
                     <!-- <div class="column is-offset-2 is-4">
@@ -210,28 +220,23 @@
                             <span id="erreurObject" class="erreur"></span>
                         </div> -->
 
-                    <div class="column is-offset-1 is-11">
-                        <div class="box-input columns">
+                    <div class="column is-12-mobile is-offset-1-desktop is-11-desktop">
+                        <div class="box-input columns is-mobile input-textarea">
                             <textarea id="message" name="message" class="column is-11" placeholder="Merci de détailler vos besoins."></textarea>
                             <span class="input-obligatoire-message column is-1"><i class="fas fa-asterisk"></i></span>
-                            <br>
-                            <!-- <span id="erreurMessage" class="erreur"></span> -->
-                            <!-- <div class="help-block with-errors"></div> -->
                         </div>
+                        <span id="erreurMessage" class="erreur"></span>
+
+
                     </div>
-                    <div class="send column is-12 mt-10 form-button">
+
+                    <div class="send column is-12 form-button">
                         <button name="message-submit" type="submit" id="form-submit" class="btnSend ml-6"><span>Envoyer</span></button>
                         <input type="hidden" name="hidden" value="1">
                     </div>
                 </div>
 
-                <?php
 
-                if (isset($_GET['send']) && $_GET['send'] === "sent") {
-                    echo 'E-mail envoyé';
-                } else if (isset($_GET['send']) && $_GET['send'] === "notSent") {
-                    echo 'Problème de serveur';
-                } ?>
 
             </form>
 
@@ -240,59 +245,27 @@
                     <path id="Tracé_9" data-name="Tracé 9" d="M1002.585,5430.063v185.7" transform="translate(-606.825 -5070.891)" fill="none" stroke="#DDDEE0" stroke-width="20" />
                 </svg> -->
         </div>
-
-        <div id="map" class="column is-2-fullhd">
+        <!-- <div > -->
+        <div class="map column is-2-fullhd" id="map">
             <!-- Ici s'affichera la carte -->
         </div>
-
+        <!-- </div> -->
     </div>
 
 </section>
 
+
+<?php global $wpdb;
+// Interrogation de la base de données
+$resultats = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}options WHERE option_name = 'adress_client'");
+// Parcours des resultats obtenus
+foreach ($resultats as $post) {
+}
+?>
 <script>
-    macarte = L.map('map');
-    var mondayLayer = L.geoJSON();
-
-
-    // On initialise la latitude et la longitude de Paris (centre de la carte)
-    var lat = 48.862725;
-    var lon = 2.287592;
-
-    function Goto(address) {
-        fetch('https://nominatim.openstreetmap.org/search?format=json&limit=3&q=' + address) // ('url') par défaut méthode get
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(data) {
-                var latitudex = data[0]['lat'];
-                var longitudex = data[0]['lon'];
-                var marker = L.marker([latitudex, longitudex]).addTo(macarte);
-                console.log('latitude=' + latitudex + ' et longitude=' + longitudex);
-            })
-
-            .catch(function(error) {
-                console.log('ici ' + error.message);
-            });
-    }
-
-    // var macarte = null;
-    // Fonction d'initialisation de la carte
-    function initMap() {
-        // Créer l'objet "macarte" et l'insèrer dans l'élément HTML qui a l'ID "map"
-        macarte.setView([lat, lon], 11);
-        // Leaflet ne récupère pas les cartes (tiles) sur un serveur par défaut. Nous devons lui préciser où nous souhaitons les récupérer. Ici, openstreetmap.fr
-        L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
-            // Il est toujours bien de laisser le lien vers la source des données
-            attribution: 'donnsées © <a href="osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="openstreetmap.fr">OSM France</a>',
-            minZoom: 1,
-            maxZoom: 20
-        }).addTo(macarte);
-    }
-    window.onload = function() {
-        // Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
-        initMap();
-    };
-    Goto(adress_client);
+    var adress_client = '<?PHP echo $post->option_value; ?>';
 </script>
+</main>
+
 
 <?php do_action('display_footer', 'package_footer'); ?>
