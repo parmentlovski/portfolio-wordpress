@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Premier champ = NOM 
     var verifNom = document.querySelector('#name');
     var verifMail = document.querySelector('#email');
+    var verifTel = document.querySelector('#tel');
     var verifMessage = document.querySelector('#message');
     
     verifNom.addEventListener('blur', erreurNom);
@@ -27,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     
         else {
+            mauvaiseSaisieNom.style.color = "grey";
             mauvaiseSaisieNom.innerHTML = 'Veuillez utiliser des caractères valides';
             return false;
         }
@@ -57,36 +59,38 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     
         else {
+            mauvaiseSaisieMail.style.color = "grey";
             mauvaiseSaisieMail.innerHTML = "Veuillez indiquer une adresse mail valide";
             return false;
         }   
     }
     
-    // // Troisième champ : message 
+    // // Troisième champ : tel
     
     
-    // verifObject.addEventListener('blur', erreurObject);
+    verifTel.addEventListener('blur', erreurTel);
     
-    // function erreurObject() {
-    //     mauvaiseSaisieObject = document.querySelector('#erreurObject');
-    //     object = /^[^<>,<|>]+$/;
+    function erreurTel() {
+        mauvaiseSaisieTel = document.querySelector('#erreurTel');
+        tel = /^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$/;
     
-    //     if (document.querySelector('#object').value.match(object)) {
-    //         mauvaiseSaisieObject.innerHTML = "";
-    //         return true;
-    //     }
+        if (document.querySelector('#tel').value.match(tel)) {
+            mauvaiseSaisieTel.innerHTML = "";
+            return true;
+        }
     
-    //     else if (document.querySelector('#object').value === ("")) {
-    //         mauvaiseSaisieObject.style.color = "grey";
-    //         mauvaiseSaisieObject.innerHTML = "Veuillez indiquer un objet";
-    //         return false;
-    //     }
+        // else if (document.querySelector('#tel').value === ("")) {
+        //     mauvaiseSaisieTel.style.color = "grey";
+        //     mauvaiseSaisieTel.innerHTML = "Veuillez indiquer un numéro de téléphone valide";
+        //     return false;
+        // }
     
-    //     else {
-    //         mauvaiseSaisieObject.innerHTML = "Veuillez indiquer un objet valide";
-    //         return false;
-    //     }
-    // }
+        // else {
+        //     mauvaiseSaisieTel.style.color = "grey";
+        //     mauvaiseSaisieTel.innerHTML = "Veuillez indiquer un objet valide";
+        //     return false;
+        // }
+    }
     
     
     // Quatrième champ : message 
@@ -103,12 +107,13 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     
         else if (document.querySelector('#message').value === ("")) {
-            mauvaiseSaisieMessage.style.color = "grey";
+            mauvaiseSaisieMessage.style.color = "#757578";
             mauvaiseSaisieMessage.innerHTML = "Veuillez indiquer un message";
             return false;
         }
     
         else {
+            mauvaiseSaisieMessage.style.color = "#757578";
             mauvaiseSaisieMessage.innerHTML = "Veuillez indiquer un message valide";
             return false;
         }
@@ -117,19 +122,19 @@ document.addEventListener("DOMContentLoaded", function() {
     // validation
     
     formulaireErreur = document.querySelector('#erreur');
+    affichageErreur = document.querySelector('.with-errors ');
     document.querySelector("form").addEventListener("submit", validation);
     
     function validation(){
      
-        if ( erreurNom() === true && erreurMail() === true  && erreurMessage() === true) { //&& erreurObject() === true
+        if ( erreurNom() === true && erreurMail() === true && erreurMessage() === true) { //&& erreurObject() === true
             submitForm();
             event.preventDefault();
         } 
         
         else {    
-            // formulaireErreur.style.marginTop = "20px";
-            // formulaireErreur.style.color = "white";
-            // formulaireErreur.innerHTML = "Veuillez remplir formulaire correctement";
+            affichageErreur.style.display = "block";
+            formulaireErreur.innerHTML = "Veuillez remplir formulaire correctement";
             event.preventDefault();
         }
     };
