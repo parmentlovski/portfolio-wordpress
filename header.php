@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Vous avez un projet web et cela nécessite un site internet ? N'hésitez pas à cliquer sur lien. Je suis freelance développeur web à Besançon">
+    <meta name="description" content="Vous avez un projet web et cela nécessite un site internet ? N'hésitez pas à visiter mon site. Je suis freelance en création de site internet à Besançon">
     <meta name="author" content="Parmentelot Bryan">
     <title>Développeur web Freelance à Besançon - Création de site internet – Parmentelot Bryan</title>
 
@@ -46,11 +46,45 @@
 
         <div id="bottom-header" class="columns">
             <div id="content-action" class="column is-7 mt-6 pt-6 ">
-                <h1 class="primary">Freelance développeur web
-                    <br>
-                    à Besançon et ses alentours.
-                    <br>
-                    Je crée votre site internet.</h1>
+            <h1 class="primary">
+                    <div class="freelance">
+                        Freelance développeur web
+                        <br>
+                        à Besançon et ses alentours.
+                        <br>
+                    </div>
+                    <!-- Je crée votre site internet. -->
+                    <div class="animationLetters">
+                        <span>C</span>
+                        <span>r</span>
+                        <span>é</span>
+                        <span>a</span>
+                        <span>t</span>
+                        <span>i</span>
+                        <span>o</span>
+                        <span class="spaceWords">n</span>
+                        &nbsp;
+                        <span>d</span>
+                        <span class="spaceWords">e</span>
+                        &nbsp;
+                        <span>s</span>
+                        <span>i</span>
+                        <span>t</span>
+                        <span class="spaceWords">e</span>
+                        &nbsp;
+                        <span>i</span>
+                        <span>n</span>
+                        <span>t</span>
+                        <span>e</span>
+                        <span>r</span>
+                        <span>n</span>
+                        <span>e</span>
+                        <span>t</span>
+                        <span>.</span>
+                        <!-- <div class="ligne"></div> -->
+                    </div>
+                </h1>
+
 
                 <button class="mt-6">
                     <a href="#contact">ME CONTACTER</a>

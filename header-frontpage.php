@@ -50,48 +50,59 @@
         <div id="bottom-header" class="columns">
             <div id="content-action" class="column is-7 mt-6 pt-6 ">
                 <h1 class="primary">
-                <div class="freelance">   
-                Freelance développeur web
-                    <br>
-                    à Besançon et ses alentours.
-                    <br> 
-                    </div> 
+                    <div class="freelance">
+                        Freelance développeur web
+                        <br>
+                        à Besançon et ses alentours.
+                        <br>
+                    </div>
                     <!-- Je crée votre site internet. -->
                     <div class="animationLetters">
-                    <span>C</span>
-                    <span>r</span>
-                    <span>é</span>
-                    <span>a</span>
-                    <span>t</span>
-                    <span>i</span>
-                    <span>o</span>
-                    <span class="spaceWords">n</span>   
-                    &nbsp;
-                    <span>d</span>
-                    <span class="spaceWords">e</span>
-                    &nbsp;
-                    <span>s</span>
-                    <span>i</span>
-                    <span>t</span>
-                    <span class="spaceWords">e</span>
-                    &nbsp;
-                    <span>i</span>
-                    <span>n</span>
-                    <span>t</span>
-                    <span>e</span>
-                    <span>r</span>
-                    <span>n</span>
-                    <span>e</span>
-                    <span>t</span>
-                    <span>.</span>
-                    <!-- <div class="ligne"></div> -->
-                </div>
+                        <span>C</span>
+                        <span>r</span>
+                        <span>é</span>
+                        <span>a</span>
+                        <span>t</span>
+                        <span>i</span>
+                        <span>o</span>
+                        <span class="spaceWords">n</span>
+                        &nbsp;
+                        <span>d</span>
+                        <span class="spaceWords">e</span>
+                        &nbsp;
+                        <span>s</span>
+                        <span>i</span>
+                        <span>t</span>
+                        <span class="spaceWords">e</span>
+                        &nbsp;
+                        <span>i</span>
+                        <span>n</span>
+                        <span>t</span>
+                        <span>e</span>
+                        <span>r</span>
+                        <span>n</span>
+                        <span>e</span>
+                        <span>t</span>
+                        <span>.</span>
+                        <!-- <div class="ligne"></div> -->
+                    </div>
                 </h1>
-                
 
-                <button id="btn-contact" class="mt-6">
+
+                <button id="btn-contact" class="mt-6 mb-6">
                     <a href="#contact">ME CONTACTER</a>
                 </button>
+
+                <div id="sendEmail" class="is-size-3">
+                    <?php
+
+                    if (isset($_GET['send']) && $_GET['send'] === "sent") {
+                        echo 'E-mail envoyé';
+                    } else if (isset($_GET['send']) && $_GET['send'] === "notSent") {
+                        echo 'Problème de serveur';
+                    } ?>
+
+                </div>
 
             </div>
 
@@ -99,12 +110,12 @@
                 <img src="wp-content/themes/from_scratch/assets/img/header.svg" class="img-header">
             </div>
         </div>
-    
+
     </header>
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="735.781" height="793.607" viewBox="0 0 735.781 793.607" style="position: absolute; top:0; right:0; z-index: -1;" class="svgHeader"> 
-            <path id="blob_menu" data-name="blob menu" d="M1005.2,0h639.737V734.949S1170.2,855.68,1028.154,750.728C963.24,702.765,903.289,606.049,909.61,418.235,917.125,194.935,1005.2,0,1005.2,0Z" transform="translate(-909.151)" fill="#ff9f40" />
-        </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="735.781" height="793.607" viewBox="0 0 735.781 793.607" style="position: absolute; top:0; right:0; z-index: -1;" class="svgHeader">
+        <path id="blob_menu" data-name="blob menu" d="M1005.2,0h639.737V734.949S1170.2,855.68,1028.154,750.728C963.24,702.765,903.289,606.049,909.61,418.235,917.125,194.935,1005.2,0,1005.2,0Z" transform="translate(-909.151)" fill="#ff9f40" />
+    </svg>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
