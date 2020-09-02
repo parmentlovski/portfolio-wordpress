@@ -4,33 +4,21 @@
 function theme_enqueue_scripts()
 {
 	wp_register_style('main-style', get_template_directory_uri() . '/style.css', array(), true);
-	// wp_enqueue_style('bulma-style', 'https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css', array(), true);
 
 	wp_enqueue_style('font_styles_merriweather', 'https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
 	wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.14.0/css/all.css');
 	wp_enqueue_style('leaflet_styles', 'https://unpkg.com/leaflet@1.6.0/dist/leaflet.css');
-	// wp_enqueue_style('leaflet_styles', 'https://unpkg.com/leaflet@1.3.1/dist/leaflet.css');
 
-	wp_enqueue_script('librairie-scrollreveal', 'https://unpkg.com/scrollreveal');
 	wp_enqueue_script('librairie-gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js');
 	wp_enqueue_script('fontawesome', 'https://use.fontawesome.com/releases/v5.3.1/js/all.js');
 	wp_enqueue_script('leaflet', 'https://unpkg.com/leaflet@1.6.0/dist/leaflet.js');
 	
-	wp_enqueue_script('script-scroll', '/wp-content/themes/from_scratch/assets/js/scroll.js');
 	wp_enqueue_script('script-js', '/wp-content/themes/from_scratch/assets/js/script.js');
-	wp_enqueue_script('script-form', '/wp-content/themes/from_scratch/assets/js/form.js');
-	wp_enqueue_script('script-map', '/wp-content/themes/from_scratch/assets/js/map.js');
-	wp_enqueue_script('script-projet', '/wp-content/themes/from_scratch/assets/js/projet.js');
 	wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js', array(), 1.0, true);
 
 	wp_enqueue_script('script-scrollMagic', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js');
-
-
 	wp_enqueue_script('script-debug-scrollMagic', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js');
 	wp_enqueue_script('script-plugin-scrollMagic', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js');
-	
-	// wp_enqueue_script('script-jquery', 'https://code.jquery.com/jquery-3.3.1.min.js', array(), 1.0, true);
-	// wp_enqueue_script('script_navbar', 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js', array(), 1.0, true);
 
 	wp_localize_script('script', 'ajaxurl', admin_url('admin-ajax.php'));
 }
@@ -155,11 +143,11 @@ if (function_exists('add_theme_support')) {
 			sanitize_text_field($_POST['competencesQuatres'])
 		);
 	}
-	if (isset($_POST['competencesCinqè!è'])) {
+	if (isset($_POST['competencesCinq'])) {
 		update_post_meta(
 			$post_ID,
-			'_competencesCinqè!è',
-			sanitize_text_field($_POST['competencesCinqè!è'])
+			'_competencesCinq',
+			sanitize_text_field($_POST['competencesCinq'])
 		);
 	}
   }
@@ -175,29 +163,22 @@ function fromscratch_contact_form()
 
 
 		$name = sanitize_text_field($_POST['name']);
-
 		$email = sanitize_email($_POST['email']);
-
 		$tel = sanitize_text_field($_POST['tel']);
-
 		$message = sanitize_text_field($_POST['message']);
-
 		$admin_email = get_option('admin_email');
-
 		$headers = "From: \"" . $name . "\" <" . $email . ">\r\n";
-
 		$sujet = "Vous recevez un message: \"" . $tel;
-
 		$envoie = mail($admin_email, $sujet, $message, $headers);
 
-		$textSend = ($envoie === true) ? 'sent' : 'notSent';
+		$textSend = ($envoie === true) ? 'oui' : 'non';
 
 
-		$wp->add_query_var('send');
-		$url = get_page_by_title('front-page');
-		// $url = get_page_by_path( 'front-page/#contact' );
-		wp_redirect(get_permalink($url) . '?send=' . $textSend);
-
+		$wp->add_query_var('email_transmis');
+		// $url = '/#contact';
+		$url = get_page_by_path('home');
+		wp_redirect($url . '/?email_transmis=' . $textSend);
+		// window.location.assign"https/le-bisontin-du-web/#contact";';
 		exit();
 	}
 }
