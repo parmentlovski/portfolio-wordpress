@@ -2,7 +2,7 @@
    <div class="content-footer py-4">
       <div>
          <img src="wp-content/themes/from_scratch/assets/img/send.svg" alt="Logo du Github de Parmentelot Bryan">
-         <p>parmentelot.bryan@hotmail.fr </p>
+         <p>parmentelot.bryan@yahoo.com</p>
       </div>
       <div>
          <img src="wp-content/themes/from_scratch/assets/img/smartphone.svg" alt="Logo du Github de Parmentelot Bryan">
@@ -14,6 +14,9 @@
          <a href="https://fr.linkedin.com/in/bryan-parmentelot" class="reseaux" target="_blank">
             <img src="wp-content/themes/from_scratch/assets/img/linkedin.svg" alt="Logo du Linkedin de Parmentelot Bryan">
          </a>
+         <div class="footer-heart">Développé avec
+            <i class="far fa-heart"></i>
+         </div>
          <a href="https://github.com/parmentlovski" class="reseaux" target="_blank">
             <img src="wp-content/themes/from_scratch/assets/img/github.svg" alt="Logo du Github de Parmentelot Bryan">
          </a>
