@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Vous avez un projet web et cela nécessite un site internet ? N'hésitez pas à cliquer sur lien. Je suis freelance développeur web à Besançon">
     <meta name="author" content="Parmentelot Bryan">
     <title>Développeur web Freelance à Besançon - Création de site internet – Parmentelot Bryan</title>
 
@@ -14,7 +13,6 @@
     <link href="<?php bloginfo('template_directory'); ?>/style.css" rel="stylesheet">
     <?php wp_head(); ?>
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script> -->
 
 </head>
 
@@ -22,7 +20,7 @@
 
     <header class="container">
 
-        <nav class="navbar" role="navigation" aria-label="main navigation">
+        <nav class="navbar" aria-label="main navigation">
             <div class="navbar-brand">
                 <a id="logo" class="navbar-item" href="/">
                     BP
@@ -39,25 +37,22 @@
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-end">
                     <a href="#services" class="link navbar-item" data-content="Services"><span>Services</span></a>
-                    <!-- <a href="#solution" class="link navbar-item" data-content="Solutions"><span>Solutions</span></a> -->
                     <a href="#projets" class="link navbar-item" data-content="Projets"><span>Projets</span></a>
                     <a href="#contact" class="link navbar-item" data-content="Contact"><span>Contact</span></a>
                 </div>
             </div>
         </nav>
-        </div>
 
         <div id="bottom-header" class="columns">
             <div id="content-action" class="column is-7 mt-6 pt-6 ">
                 <h1 class="primary">
-                    <div class="freelance">
-                        Freelance développeur web
+                    <span class="freelance">
+                        Freelance développeur <span class="paddingRightTitle">web</span>
                         <br>
-                        à Besançon et ses alentours.
+                        <span class="paddingLeftTitle">à</span> Besançon et ses alentours.
                         <br>
-                    </div>
-                    <!-- Je crée votre site internet. -->
-                    <div class="animationLetters">
+                    </span>
+                    <span class="animationLetters">
                         <span>C</span>
                         <span>r</span>
                         <span>é</span>
@@ -84,32 +79,21 @@
                         <span>e</span>
                         <span>t</span>
                         <span>.</span>
-                        <!-- <div class="ligne"></div> -->
-                    </div>
+                    </span>
                 </h1>
 
 
-                <button id="btn-contact" class="mt-6 mb-6">
+                <div id="btn-contact" class="mt-6 mb-6">
                     <a href="#contact">ME CONTACTER</a>
-                </button>
-
-                <div id="sendEmail" class="is-size-3">
-                    <?php
-
-                    if (isset($_GET['send']) && $_GET['send'] === "sent") {
-                        echo 'E-mail envoyé';
-                    } else if (isset($_GET['send']) && $_GET['send'] === "notSent") {
-                        echo 'Problème de serveur';
-                    } ?>
-
                 </div>
 
             </div>
 
             <div class="column content-header">
-                <img src="wp-content/themes/from_scratch/assets/img/header.svg" class="img-header">
+                <img src="wp-content/themes/from_scratch/assets/img/header_creation_de_site.svg" class="img-header" alt="Image représentant une personne en train de créer un site internet">
             </div>
         </div>
+        <!-- <span class="line-header-bottom"></span> -->
 
     </header>
 
@@ -118,29 +102,14 @@
     </svg>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-
-            // Get all "navbar-burger" elements
-            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-            // Check if there are any navbar burgers
-            if ($navbarBurgers.length > 0) {
-
-                // Add a click event on each of them
-                $navbarBurgers.forEach(el => {
-                    el.addEventListener('click', () => {
-
-                        // Get the target from the "data-target" attribute
-                        const target = el.dataset.target;
-                        const $target = document.getElementById(target);
-
-                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                        el.classList.toggle('is-active');
-                        $target.classList.toggle('is-active');
-
-                    });
-                });
-            }
-
+        document.addEventListener("DOMContentLoaded", () => {
+            const e = Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"), 0);
+            e.length > 0 && e.forEach(e => {
+                e.addEventListener("click", () => {
+                    const t = e.dataset.target,
+                        a = document.getElementById(t);
+                    e.classList.toggle("is-active"), a.classList.toggle("is-active")
+                })
+            })
         });
     </script>
