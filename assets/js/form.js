@@ -9,8 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var verifMessage = document.querySelector('#message');
     
     verifNom.addEventListener('blur', erreurNom);
-    
-    
+
     function erreurNom() {
     
         mauvaiseSaisieNom = document.querySelector('#erreurName');
@@ -35,9 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
     }
     
-    
     // Deuxieme champ : mail 
-    
     
     verifMail.addEventListener('blur', erreurMail);
     
@@ -78,18 +75,6 @@ document.addEventListener("DOMContentLoaded", function() {
             mauvaiseSaisieTel.innerHTML = "";
             return true;
         }
-    
-        // else if (document.querySelector('#tel').value === ("")) {
-        //     mauvaiseSaisieTel.style.color = "grey";
-        //     mauvaiseSaisieTel.innerHTML = "Veuillez indiquer un numéro de téléphone valide";
-        //     return false;
-        // }
-    
-        // else {
-        //     mauvaiseSaisieTel.style.color = "grey";
-        //     mauvaiseSaisieTel.innerHTML = "Veuillez indiquer un objet valide";
-        //     return false;
-        // }
     }
     
     
