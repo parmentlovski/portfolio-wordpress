@@ -9,7 +9,7 @@
          <img src="../wp-content/themes/from_scratch/assets/img/smartphone.svg" alt="Logo du Github de Parmentelot Bryan">
          <p>0785634902 </p>
       </div>
-      <p>Création de site internet - Besançon - 2020 </p>
+      <p id="creation">Création de site internet - Besançon - 2020 </p>
       <a id="mentions" href="mentions-legales" target="_blank">Mentions légales</a>
       <div class="content-reseaux">
          <a href="https://fr.linkedin.com/in/bryan-parmentelot" class="reseaux" target="_blank">
