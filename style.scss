@@ -85,11 +85,6 @@ $input-shadow: none;
         @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (orientation : landscape) {
             margin-top: 180px;
         }
-
-
-        @media screen and (min-width: 1100px) and (max-width: 1400px) {
-            margin-top: 280px;
-        }
     }
 
     &:last-child {
@@ -503,9 +498,14 @@ header {
                         padding: 10px !important;
                     }
 
-                    @media only screen and (min-width: 768px) and (orientation: portrait) {
+                    @media only screen and (min-width: 768px) and (max-width : 1024px) and (orientation: portrait) {
                         line-height: 90px;
+                        background: $orange;
                     }
+
+                    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+                        /* Styles pour cette Media Queries */
+                        }
 
 
                     @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -561,7 +561,7 @@ header {
                     }
 
                     @media only screen and (max-width: 767px) {
-                        margin-top: 50px;
+                        margin-top: 70px;
                         display: block;
                     }
 
@@ -625,12 +625,18 @@ header {
                 }
 
                 @media only screen and (max-width: 767px) {
-                    margin-top: 20px;
-                    width: 70%;
+                    margin-top: 50px;
+                    width: 60%;
+                    font-size: 14px;
                 }
 
                 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (orientation : landscape) {
                     margin-top: 80px;
+                }
+
+                @media screen and (min-width: 1025px) and (max-width: 1399px) {
+                    width: 45%;
+                    margin-right: 30%;
                 }
 
                 @media screen and (min-width: 1100px) and (max-width: 1699px) {
@@ -651,7 +657,7 @@ header {
                 margin-top: 105px;
             }
 
-            @media screen and (min-width: 768px) and (max-width: 1023px) {
+            @media screen and (min-width: 768px) and (max-width: 1024px) {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -659,7 +665,7 @@ header {
                 width: 100%;
             }
 
-            @media screen and (min-width: 1024px) and (max-width: 1699px) {
+            @media screen and (min-width: 1025px) and (max-width: 1699px) {
                 margin-top: 90px;
             }
 
@@ -715,11 +721,22 @@ header {
     position: relative;
 
     .titleSection {
+
+        .backgroundYellow {
+    
+            @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (orientation : landscape) {
+                margin-top: 180px;
+            }
+    
+            @media screen and (min-width: 1024px) and (max-width: 1400px) {
+                margin-top: 200px;
+            }
+        }
         @media only screen and (max-width: 767px) {
             margin-top: 60px;
             margin-bottom: 30px;
         }
-    }
+    }   
 
     .content-services {
         .img-services {
@@ -1019,7 +1036,7 @@ header {
                     display: none;
                 }
 
-                
+
 
                 @media screen and (min-width: 1250px) and (max-width: 1699px) {
                     height: 375px;
@@ -1129,8 +1146,9 @@ header {
                     .input-erreur {
                         color: $orange;
                     }
-                    .input-email-valide{
-                        color: 	#006400;
+
+                    .input-email-valide {
+                        color: #006400;
                     }
 
                     .input-email-non-valide {
@@ -1142,10 +1160,11 @@ header {
                         color: #006400;
                     }
 
-                    .fa-times-circle {
+                    .fa-times-circle {
                         // logo email non valide
                         color: #650000;
                     }
+
                     .erreur,
                     .valide,
                     .non-valide {
@@ -1160,7 +1179,7 @@ header {
                         //     font-size: 13px !important;
                         // }
                     }
-                
+
 
                     .input-textarea {
                         height: 90%;
@@ -1204,6 +1223,10 @@ header {
                         @media only screen and (min-width: 768px) and (orientation: portrait) {
                             margin-left: 0 !important;
                         }
+
+                        @media screen and (min-width: 1025px) and (max-width: 1399px) {
+                            margin-left: 0 !important;
+                        }
                     }
                 }
 
@@ -1215,17 +1238,19 @@ header {
         border: 1px solid $orange;
         margin-left: 6%;
 
-        @media only screen and (max-width: 767px) {
+        @media only screen and (max-width : 1280px) {
             display: none;
         }
 
-        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+        @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
             display: none;
         }
 
-        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-            display: none;
-        }
+        // @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {}
+
+        // @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+        //     display: none;
+        // }
 
     }
 
@@ -1233,9 +1258,9 @@ header {
         height: 730px;
     }
 
-    @media only screen and (min-width: 768px) and (orientation: portrait) {
-        height: 750px;
-    }
+    // @media only screen and (min-width: 768px) and (orientation: portrait) {
+    //     height: 750px;
+    // }
 
     @media screen and (min-width: 768px) and (max-width: 1699px) {
         height: 825px;
@@ -1317,6 +1342,11 @@ footer {
                 // }
             }
         }
+        #creation{
+            @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+                display: none;
+            }
+        }
 
         #mentions {
             color: white;
@@ -1393,7 +1423,15 @@ footer {
             font-size: 12px;
         }
 
-        @media screen and (min-width: 768px) and (max-width: 1699px) {
+        @media only screen and (min-width: 767px) and (max-width: 1024px) {
+            font-size: 11px;
+        }
+
+        @media screen and (min-width: 1025px) and (max-width: 1399px) {
+            font-size: 13px;
+        }
+
+        @media screen and (min-width: 1400px) and (max-width: 1699px) {
             font-size: 15px;
             padding: 1% 0;
         }
